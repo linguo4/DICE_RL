@@ -5,16 +5,16 @@ This project borrows ideas from the Dynamic Integrated Climate-Economy (DICE) mo
 
 In this application, the Tabular Q-learning, Deep Q Network and Actor-Critic Algorithms are adopted. 
 
-[Original DICE Model (Python)] (https://github.com/linguo4/DICE_RL/blob/master/DICE.ipynb)
+[Original DICE Model (Python)](https://github.com/linguo4/DICE_RL/blob/master/DICE.ipynb)
 
-[Tabular Q-learning] (https://github.com/linguo4/DICE_RL/blob/master/DICE_Tabular%20Q.ipynb): Create a Q-table, and roughly choose actions simultaneously for the total 200 values of Miu and S over 100 years. The bounds for the Miu and S are not bounded perfectly and the action space is discrete, making the observation space discrete, as well.
+[Tabular Q-learning](https://github.com/linguo4/DICE_RL/blob/master/DICE_Tabular%20Q.ipynb): Create a Q-table, and roughly choose actions simultaneously for the total 200 values of Miu and S over 100 years. The bounds for the Miu and S are not bounded perfectly and the action space is discrete, making the observation space discrete, as well.
 
-[Deep Q Network_1] (https://github.com/linguo4/DICE_RL/blob/master/DICE_DQN_1.ipynb) Choose the MIU and S at each step according to epsilon-greedy action policy from the replay buffer and calculate the reward at each step (even if the step doesn't reach 99). The state also incorporated step as an input. The action space is still discrete, but the result converge beyond 4400 after the epsilon reaches high.
+[Deep Q Network_1](https://github.com/linguo4/DICE_RL/blob/master/DICE_DQN_1.ipynb) Choose the MIU and S at each step according to epsilon-greedy action policy from the replay buffer and calculate the reward at each step (even if the step doesn't reach 99). The state also incorporated step as an input. The action space is still discrete, but the result converge beyond 4400 after the epsilon reaches high.
 
-[Deep Q Network_2] (https://github.com/linguo4/DICE_RL/blob/master/DICE_DQN_2.ipynb) Use the initialization of MIU and S for 100 years for reward calculation, update the MIU and S at each step (looping over 100 years) according to epsilon-greedy action policy from the replay buffer and calculate the reward at each step. The action space is still discrete, and the result seems not converging.
+[Deep Q Network_2](https://github.com/linguo4/DICE_RL/blob/master/DICE_DQN_2.ipynb) Use the initialization of MIU and S for 100 years for reward calculation, update the MIU and S at each step (looping over 100 years) according to epsilon-greedy action policy from the replay buffer and calculate the reward at each step. The action space is still discrete, and the result seems not converging.
 
-[Actor-Critic Sample] (https://github.com/linguo4/DICE_RL/blob/master/A2C%20Sample.ipynb) A2C sample from tensorflow official website.
+[Actor-Critic Sample](https://github.com/linguo4/DICE_RL/blob/master/A2C%20Sample.ipynb) A2C sample from tensorflow official website.
 
-[Actor-Critic on Dice Model_1] (https://github.com/linguo4/DICE_RL/blob/master/DICE_A2C_1.ipynb) A2C on DICE model. Choose MIU and S and output reward at each year. Choose action with Bivariate Normal Dist. Result changes between 4200 to 4400 and cannot reach 4500.
+[Actor-Critic on Dice Model_1](https://github.com/linguo4/DICE_RL/blob/master/DICE_A2C_1.ipynb) A2C on DICE model. Choose MIU and S and output reward at each year. Choose action with Bivariate Normal Dist. Result changes between 4200 to 4400 and cannot reach 4500.
 
-[Actor-Critic on Dice Model_2] (https://github.com/linguo4/DICE_RL/blob/master/DICE_A2C_2.ipynb) A2C on DICE model. Use the initialization of MIU and S for 100 years for reward calculation, update MIU and S year by year and output reward over the updated 100 years' values. Choose action with Bivariate Normal Dist. Result converges to negative -1.34. 
+[Actor-Critic on Dice Model_2](https://github.com/linguo4/DICE_RL/blob/master/DICE_A2C_2.ipynb) A2C on DICE model. Use the initialization of MIU and S for 100 years for reward calculation, update MIU and S year by year and output reward over the updated 100 years' values. Choose action with Bivariate Normal Dist. Result converges to negative -1.34. 
