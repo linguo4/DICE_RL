@@ -25,3 +25,6 @@ In this application, the Tabular Q-learning, Deep Q Network and Actor-Critic Alg
 
 [Actor-Critic on Dice Model_2](https://github.com/linguo4/DICE_RL/blob/master/DICE_A2C_2.ipynb) (Used Tensorflow 2.0)
 : A2C on DICE model. Use the initialization of MIU and S for 100 years for reward calculation, update MIU and S year by year and output reward over the updated 100 years' values. Choose action with Bivariate Normal Dist. Result converges to negative -1.34. 
+
+[DDPG on Dice Model](https://github.com/linguo4/DICE_RL/blob/master/DICE_DDPG.ipynb) (Used Tensorflow 2.0)
+: DDPG on DICE model. Choose MIU and S and output reward at each year. Choose action from the replaybuffer, then sample from two independent normal distribution (with choosen action as means) with decaying variances for miu and s. This algorithm behaves the best with the best convergence performance and solves the problem.
